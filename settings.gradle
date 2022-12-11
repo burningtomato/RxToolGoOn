@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "RxToolGoOn"
 include ':app'
 include ':DialogDate'
+include ':ErrorCrash'

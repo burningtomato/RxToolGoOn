@@ -1,0 +1,38 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.error_crash">
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true">
+        <activity
+            android:name=".ActivityCrash"
+            android:process=":error_activity" />
+
+        <provider
+            android:name="com.example.error_crash.TCrashProvider"
+            android:authorities="${applicationId}.tcrashprovider"
+            android:exported="false"
+            android:initOrder="101" />
+
+        <!--<provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>-->
+
+        <!--<provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>-->
+    </application>
+</manifest>
+
